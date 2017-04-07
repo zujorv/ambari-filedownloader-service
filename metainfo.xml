@@ -4,7 +4,7 @@
     <services>
         <service>
             <name>FILEDOWNLOADER</name>
-            <displayName>Generic File Downloader</displayName>
+            <displayName>File Downloader</displayName>
             <comment>Downloads files into selected folders in nodes</comment>
             <version>1.0.0</version>
             <components>
