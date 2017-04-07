@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<metainfo>
+    <schemaVersion>2.0</schemaVersion>
+    <services>
+        <service>
+            <name>FILEDOWNLOADER</name>
+            <displayName>Generic File Downloader</displayName>
+            <comment>Downloads files into selected folders in nodes</comment>
+            <version>1.0.0</version>
+            <components>
+                <component>
+                    <name>FILEDOWLOADER_NODE</name>
+                    <displayName>File Downloader Node</displayName>
+                    <category>MASTER</category>
+                    <cardinality>0+</cardinality>
+                    <commandScript>
+                        <script>scripts/downloader.py</script>
+                        <scriptType>PYTHON</scriptType>
+                        <timeout>20000</timeout>
+                    </commandScript>
+                </component>
+            </components>
+            <osSpecifics>
+                <osSpecific>
+                    <osFamily>any</osFamily>
+                </osSpecific>
+                <packages>
+                    <package>
+                        <name>wget</name>
+                    </package>
+                </packages>
+            </osSpecifics>
+      	    <configuration-dependencies>
+        	    <config-type>downloader-config</config-type>
+      	    </configuration-dependencies>
+            <restartRequiredAfterChange>true</restartRequiredAfterChange>
+        </service>
+    </services>
+</metainfo>

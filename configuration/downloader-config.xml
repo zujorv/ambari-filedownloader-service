@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+    <property require-input="true">
+        <name>content.json</name>
+        <value></value>
+        <description>JSON containing needed elements:
+[
+    {
+        "install-dir": "/absolute/path"
+        "files": [
+            {
+                "name": "name_to_save_file_as",
+                "url": ""
+            },
+            ...
+        ]
+    },
+    ...
+]
+        </description>
+    </property>
+    <property require-input="true">
+        <name>log.file</name>
+        <value>/var/log/filedownloader-service.log</value>
+        <description>Log file for File Downloader service</description>
+    </property>
+</configuration>
