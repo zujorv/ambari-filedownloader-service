@@ -33,6 +33,7 @@ class Master(Script):
         import params
         # Install packages listed in metainfo.xml
         self.install_packages(env)
+        # Save downloadable files information to allow uninstalling them
         content = InlineTemplate(params.content_json)
         Execute('echo "Saving content_json at ' + params.content_filename + '" >> ' + params.log_file)
         File(format(params.content_filename), content=content, owner='root',group='root', mode=0644)
@@ -43,10 +44,12 @@ class Master(Script):
 
     def stop(self, env):
         import params
+        # Remove downloaded files
         self.remove_files(params.content_json)
 
     def start(self, env):
         import params
+        # Download files and save eac one at its location
         self.download_files(params.content_json)
 
     def status(self, env):
