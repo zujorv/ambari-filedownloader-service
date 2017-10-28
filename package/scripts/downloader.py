@@ -20,7 +20,7 @@ class Master(Script):
                 Execute('rm -f ' + install_dir + '/' + file["name"] + ' >> ' + params.log_file)
 
     def check_files(self, data_string):
-        #import os.path
+        # Check file existance
         i = 0
         for data in json.loads(data_string):
             install_dir = data["install-dir"]
@@ -49,11 +49,12 @@ class Master(Script):
 
     def start(self, env):
         import params
-        # Download files and save eac one at its location
+        # Download files and save each one at its location
         self.download_files(params.content_json)
 
     def status(self, env):
         import params
+        # Check file existance
         file = open(params.content_filename, "r")
         if self.check_files(file.read()) == 0:
             pass
