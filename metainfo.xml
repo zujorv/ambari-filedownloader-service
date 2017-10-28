@@ -5,7 +5,7 @@
         <service>
             <name>FILEDOWNLOADER</name>
             <displayName>File Downloader</displayName>
-            <comment>Downloads files into selected folders in nodes</comment>
+            <comment>Downloads provided files into selected folders in node</comment>
             <version>1.0.0</version>
             <components>
                 <component>
@@ -16,7 +16,7 @@
                     <commandScript>
                         <script>scripts/downloader.py</script>
                         <scriptType>PYTHON</scriptType>
-                        <timeout>20000</timeout>
+                        <timeout>120000</timeout>
                     </commandScript>
                 </component>
             </components>
