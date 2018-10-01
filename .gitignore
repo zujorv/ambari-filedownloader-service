@@ -1,9 +1,9 @@
 # Build tool #
-##################
+##############
 
 
 # IDE #
-##################
+#######
 .pydevproject
 .springBeans
 .classpath
@@ -13,6 +13,14 @@
 *.iml
 .idea/
 
+# NetBeans #
+############
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
 
 # Compiled source #
 ###################
@@ -26,7 +34,7 @@
 
 
 # Assembled source #
-###################
+####################
 
 
 # OS generated files #
