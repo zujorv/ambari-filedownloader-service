@@ -6,7 +6,7 @@
             <name>FILEDOWNLOADER</name>
             <displayName>File Downloader</displayName>
             <comment>Downloads provided files into selected folders in node</comment>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
             <components>
                 <component>
                     <name>FILEDOWLOADER_NODE</name>
@@ -16,7 +16,7 @@
                     <commandScript>
                         <script>scripts/downloader.py</script>
                         <scriptType>PYTHON</scriptType>
-                        <timeout>120000</timeout>
+                        <timeout>600000</timeout>
                     </commandScript>
                 </component>
             </components>
